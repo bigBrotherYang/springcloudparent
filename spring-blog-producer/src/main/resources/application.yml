@@ -15,6 +15,16 @@ mybatis:
   mapper-locations: classpath:com/xtkj/mapper/*.xml
   type-aliases-package: com.xtkj.pojo
 eureka:
+  instance:
+    instance-id: producer-9998
+    ip-address: true
   client:
     service-url:
       defaultZone: http://localhost:9999/eureka/
+info:
+  app:
+    name: superMan
+    company: 讯腾科技
+  build:
+    artifactId: spring-blog-producer
+    version : 0.0.1-SNAPSHOT
