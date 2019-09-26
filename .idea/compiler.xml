@@ -9,6 +9,7 @@
         <module name="spirng-eureka-register" />
         <module name="spring-blog-consumer" />
         <module name="spring-blog-producer" />
+        <module name="spring-blog-producer-19998" />
         <module name="spring-eureka-register-19999" />
         <module name="springpojo" />
       </profile>

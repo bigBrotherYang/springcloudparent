@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xtkj.dao.BlogMapper">
+  <resultMap id="BaseResultMap" type="com.xtkj.pojo.Blog">
+    <id column="B_ID" jdbcType="DECIMAL" property="bId" />
+    <result column="B_NAME" jdbcType="VARCHAR" property="bName" />
+    <result column="B_CONTEXT" jdbcType="VARCHAR" property="bContext" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    B_ID, B_NAME, B_CONTEXT
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.math.BigDecimal" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from BLOG
+    where B_ID = #{bId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.math.BigDecimal">
+    delete from BLOG
+    where B_ID = #{bId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.xtkj.pojo.Blog">
+    insert into BLOG (B_ID, B_NAME, B_CONTEXT
+      )
+    values (#{bId,jdbcType=DECIMAL}, #{bName,jdbcType=VARCHAR}, #{bContext,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xtkj.pojo.Blog">
+    insert into BLOG
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="bId != null">
+        B_ID,
+      </if>
+      <if test="bName != null">
+        B_NAME,
+      </if>
+      <if test="bContext != null">
+        B_CONTEXT,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="bId != null">
+        #{bId,jdbcType=DECIMAL},
+      </if>
+      <if test="bName != null">
+        #{bName,jdbcType=VARCHAR},
+      </if>
+      <if test="bContext != null">
+        #{bContext,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xtkj.pojo.Blog">
+    update BLOG
+    <set>
+      <if test="bName != null">
+        B_NAME = #{bName,jdbcType=VARCHAR},
+      </if>
+      <if test="bContext != null">
+        B_CONTEXT = #{bContext,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where B_ID = #{bId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xtkj.pojo.Blog">
+    update BLOG
+    set B_NAME = #{bName,jdbcType=VARCHAR},
+      B_CONTEXT = #{bContext,jdbcType=VARCHAR}
+    where B_ID = #{bId,jdbcType=DECIMAL}
+  </update>
+  <select id="findBlogs" resultMap="BaseResultMap">
+    select * from blog
+  </select>
+</mapper>

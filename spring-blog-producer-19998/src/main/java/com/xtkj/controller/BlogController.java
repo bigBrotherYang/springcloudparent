@@ -17,7 +17,7 @@ public class BlogController {
     }
     @GetMapping("blog/{id}")
     public Blog getBLogById(@PathVariable("id")Integer id){
-        System.out.println("9998生产者被调用");
+        System.out.println("19998生产者被调用");
         return blogService.get(id);
     }
 
