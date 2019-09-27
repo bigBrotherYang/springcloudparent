@@ -1,0 +1,10 @@
+
+server:
+  port: 9997
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xtkj1.com:9999/eureka/,http://xtkj2.com:19999/eureka/
+spring:
+  application:
+    name: consumer-blog
