@@ -8,3 +8,19 @@ eureka:
 spring:
   application:
     name: consumer-blog
+feign:
+  hystrix:
+    enabled: true
+  client: #设置 超时配置
+    config:
+      default:
+        connectTimeout: 7000
+        readTimeout: 7000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000

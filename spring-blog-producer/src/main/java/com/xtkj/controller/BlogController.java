@@ -1,5 +1,7 @@
 package com.xtkj.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.xtkj.pojo.Blog;
 import com.xtkj.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,11 @@ public class BlogController {
     private IBlogService blogService;
     @GetMapping("blog/list")
     public List<Blog> getBLogs(){
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return blogService.list();
     }
     @GetMapping("blog/{id}")

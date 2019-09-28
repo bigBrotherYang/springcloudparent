@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloud-blog-hystrix-dashboard" />
         <module name="spirng-eureka-register" />
         <module name="spring-blog-consumer" />
         <module name="spring-blog-consumner-feign" />
