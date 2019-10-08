@@ -1,0 +1,33 @@
+
+server:
+  port: 9995
+spring:
+  application:
+    name: spring-blog-zuul
+
+eureka:
+  instance:
+    instance-id: producer-19998
+    ip-address: true
+  client:
+    service-url:
+      defaultZone: http://xtkj1.com:9999/eureka/,http://xtkj2.com:19999/eureka/
+info:
+  app:
+    name: superMan
+    company: 讯腾科技
+  build:
+    artifactId: spring-blog-producer-19998
+    version : 0.0.1-SNAPSHOT
+zuul:
+  routes: ## xtkj.com:9995/consumer/consumer/blog/list
+    ## 自己起名字
+    sonsumer1:
+    ### 拦截的路径
+      path: /consumer/**
+      ## 转发代理的微服务地址
+      serviceId: consumer-blog
+    producer1:
+      path: /producer/**
+      serviceId: blog-producer
+    ignored-services: "*"

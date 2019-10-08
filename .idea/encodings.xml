@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/spring-blog-consumner-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-blog-producer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-blog-producer-19998" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-blog-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-eureka-register-19999" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-pojo" charset="UTF-8" />
   </component>

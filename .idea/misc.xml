@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/spring-blog-producer-19998/pom.xml" />
         <option value="$PROJECT_DIR$/spring-blog-consumner-feign/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-blog-hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-blog-zuul/pom.xml" />
       </list>
     </option>
   </component>

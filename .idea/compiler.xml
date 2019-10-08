@@ -12,6 +12,7 @@
         <module name="spring-blog-consumner-feign" />
         <module name="spring-blog-producer" />
         <module name="spring-blog-producer-19998" />
+        <module name="spring-blog-zuul" />
         <module name="spring-eureka-register-19999" />
         <module name="springapi" />
         <module name="springpojo" />

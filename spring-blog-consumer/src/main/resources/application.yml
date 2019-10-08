@@ -1,6 +1,6 @@
 
 server:
-  port: 9997
+  port: 29997
 eureka:
   client:
     service-url:
