@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 19999
+spring:
+  prefile: dev
+  application:
+    name: eureka-register-19999-dev
+eureka:
+  instance:
+    hostname: xtkj2.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://xtkj1.com:9999/eureka/
+      #defaultZone: http://localhost:9999/eureka/
+---
+server:
+  port: 9999
+spring:
+  prefile: test
+  application:
+    name: eureka-register-9999-test
+eureka:
+  instance:
+    hostname: xtkj1.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://xtkj2.com:19999/eureka/
