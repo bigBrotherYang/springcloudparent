@@ -1,0 +1,19 @@
+#spring:
+#  cloud:
+#    config:
+#      uri: xtkj1.com:5678
+#      username: 'htmlz@qq.com'
+#      password: '3721yangxuechao'
+#      label: cloud-config
+#      profile: dev
+#      name:
+#
+spring:
+  cloud:
+    config:
+      name: application-eureka-register
+      uri: http://xtkj1.com:5678
+      label: cloud-config
+      username: 'htmlz@qq.com'
+      password: '3721yangxuechao'
+      profile: test
