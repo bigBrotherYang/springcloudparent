@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active:
+    - dev
+    ## 当前默认选择的版本
+---
+spring:
+  profiles: dev
+  application:
+    name: cloud-config-resources-dev
+---
+spring:
+  profiles: test
+  application:
+    name: cloud-config-resources-test
+---
+spring:
+  profiles: prod
+  application:
+    name: cloud-config-resources-prod
