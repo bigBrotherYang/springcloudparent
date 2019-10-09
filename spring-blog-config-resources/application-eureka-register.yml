@@ -6,7 +6,7 @@ spring:
 server:
   port: 19999
 spring:
-  prefile: dev
+  profiles: dev
   application:
     name: eureka-register-19999-dev
 eureka:
@@ -22,7 +22,7 @@ eureka:
 server:
   port: 9999
 spring:
-  prefile: test
+  profiles: test
   application:
     name: eureka-register-9999-test
 eureka:
