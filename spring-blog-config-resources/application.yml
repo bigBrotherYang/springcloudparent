@@ -1,7 +1,6 @@
 spring:
   profiles:
-    active:
-    - dev
+    active: dev
     ## 当前默认选择的版本
 ---
 spring:
