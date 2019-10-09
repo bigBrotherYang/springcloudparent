@@ -1,0 +1,15 @@
+server:
+  port: 5678
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/bigBrotherYang/springcloudparent.git
+          ## 如果有个多个配置文件的路径 用逗号隔开
+          search-paths: spring-blog-config-resources
+          username: 'htmlz@qq.com'
+          password: '3721yangxuechao'
+          default-label: master
+          ## 读取配置文件的 分支
+
