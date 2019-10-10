@@ -9,6 +9,8 @@ spring:
   profiles: dev
   application:
     name: eureka-register-19999-dev
+  zipkin:
+    base-url: http://xtkj1.com:9411
 eureka:
   instance:
     hostname: xtkj2.com
