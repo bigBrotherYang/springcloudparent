@@ -1,0 +1,11 @@
+server:
+  port: 9411
+spring:
+  application:
+    name: zipkin-server
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://xtkj1.com:9999/eureka/,http://xtkj2.com:19999/eureka/
