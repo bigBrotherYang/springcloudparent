@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: spring-blog-zuul
+  zipkin:
+    base-url: http://xtkj1.com:9411
 
 eureka:
   instance:

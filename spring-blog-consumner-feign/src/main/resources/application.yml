@@ -8,6 +8,8 @@ eureka:
 spring:
   application:
     name: consumer-blog
+  zipkin:
+    base-url: http://xtkj1.com:9411
 feign:
   hystrix:
     enabled: true

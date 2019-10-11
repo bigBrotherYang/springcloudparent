@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: eureka-register
+  zipkin:
+    base-url: http://xtkj1.com:9411
 eureka:
   instance:
     hostname: xtkj1.com

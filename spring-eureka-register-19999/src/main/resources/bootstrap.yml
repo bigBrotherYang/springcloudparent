@@ -2,8 +2,8 @@
 #  cloud:
 #    config:
 #      uri: xtkj1.com:5678
-#      username: 'htmlz@qq.com'
-#      password: '3721yangxuechao'
+#      username: '*******'
+#      password: '*******'
 #      label: cloud-config
 #      profile: dev
 #      name:
@@ -16,4 +16,4 @@ spring:
       label: cloud-config
       username: '******'
       password: '******'
-      profile: test
+      profile: dev
